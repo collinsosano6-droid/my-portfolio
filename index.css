@@ -21,7 +21,7 @@
   color: #fff;
 }
 .main-content {
-  padding-top: 5em; 
+  padding-top: 1em; 
   background-color: beige;
 }
 .main-content section {
@@ -31,11 +31,26 @@
 #home h1 { 
     font-size: 2.5em;
     margin-bottom: 0.5em;
+    font-style: oblique;
   }
  #home p {
     font-size: 1.2em;
     color: #666;
   }
+  #home img{
+    background-image: none;
+    width:1%;
+  }
+.description h2 {
+  text-align: center;
+  font-style: oblique;
+  font-size: xx-large;
+  padding-top: 0px;
+}
+.description p{
+  font-size: x-large;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .portfolio-container {
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +82,34 @@
 .portfolio-item:hover {
 transform: scale(1.05);
 }
+
+.coding{
+  display: flex;
+  justify-content: space-around;
+}
+.coding-item img{
+  box-shadow: 0px 2px 5px grey;
+  width: 50%;
+  border-radius: 5%;
+}
+
+.coding-item p{
+  font-size: smaller;
+}
+
+h6 {
+  font-style: italic;
+  font-size: xx-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.linkbar ul li{
+  font-size: xx-large;
+  padding-top: 10%;
+}
 #footer {
+  display: flex;
+  justify-content: center;
   background-color: #222;
   color: #fff;
   text-align: center;
