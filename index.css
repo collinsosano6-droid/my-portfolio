@@ -1,75 +1,166 @@
+:root {
+  --background: #0f172a;   /*background color of entire page*/
+  --surface: #1e293b;      /* color of the cards*/
+  --text: #f8fafc;         /* color of the headings*/
+  --muted: #94a3b8;        /* color of the paragraphs*/
+  --accent: #38bdf8;       /* color of the buttons and links*/
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;                    /*space  outside element*/
+  padding: 0;                   /* space inside element*/
+}
+
+html {
+  scroll-behavior: smooth;       /*CSS property specifies whether the browser should smoothly animate the transition or jump instantly when scrolling */
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
 .navbar {
-    background-color: #333;
-    font-size: 1.2em;
-    padding: 1em;
-    text-align: left;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0px;
 }
-.navbar ul {
-   list-style: none;
-   margin: 0;
-   padding: 0;
+
+.logo,
+nav a {
+  color: var(--text);
+  text-decoration: none;
 }
-.navbar ul li {
-   display: inline;
-   margin: 0 1em;
+
+.logo {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.2rem;
 }
-.navbar ul li a {
-  color: #fff;
+
+nav {
+  display: flex;
+  gap: 24px;
 }
-.main-content {
-  padding-top: 1em; 
-  background-color: beige;
+
+nav a:hover {
+  color: var(--accent);
 }
-.main-content section {
-  padding: 2em 1em;
-  text-align: center;
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 5px 0x;
 }
-#home h1 { 
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-    font-style: oblique;
-  }
- #home p {
-    font-size: 1.2em;
-    color: #666;
-  }
-  #home img{
-    background-image: none;
-    width:1%;
-  }
-.description h2 {
-  text-align: center;
-  font-style: oblique;
-  font-size: xx-large;
-  padding-top: 0px;
+
+section {
+  padding: 10px 0;
 }
-.description p{
-  font-size: x-large;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 1em;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1.1;
+  margin: 12px 0 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro,
+section p {
+  color: var(--muted);
+  max-width: 650px;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary {
+  background: var(--accent);
+  color: #082f49;
+}
+
+.secondary {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--surface);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card span {
+  display: block;
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-top: 18px;
 }
 .portfolio-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  flex-direction: row;
   padding: 1em ;
 }
 .portfolio-item {
- background-color: #fff;
+ background-color: #b3eaee;
  border: 1px solid #ddd;
   box-sizing: border-box;
   margin: 1em;
   padding: 1em;
-  width: 30%;
+  width: 29%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s;
 }
-.portfolio-item h3 {
+.portfolio-item h4 {
     font-weight: bold;
-    margin-bottom: 0.5em;
+    margin-bottom: 0em;
+    color: white;
 }
 .portfolio-item p {
     color: #666;
@@ -83,38 +174,37 @@
 transform: scale(1.05);
 }
 
-.coding{
-  display: flex;
-  justify-content: space-around;
+#skills {
+    text-align:center;
 }
-.coding-item img{
-  box-shadow: 0px 2px 5px grey;
-  width: 50%;
-  border-radius: 5%;
+#skills p{
+    display: inline;
 }
-
-.coding-item p{
-  font-size: smaller;
+#contact{
+    text-align: center;
 }
-
-h6 {
-  font-style: italic;
-  font-size: xx-large;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+#contact p{
+    display: inline;
 }
-
-.linkbar ul li{
-  font-size: xx-large;
-  padding-top: 10%;
-}
-#footer {
-  display: flex;
-  justify-content: center;
-  background-color: #222;
-  color: #fff;
+footer {
   text-align: center;
-  padding: 2em;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  color: var(--muted);
+  padding: 30px;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
